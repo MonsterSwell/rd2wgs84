@@ -11,10 +11,8 @@ Translates Rijksdriehoekscoordinaten to WGS84
 Uses transformation formulae provided in Transformatieformules.pdf (from dekoepel.nl)
 Specifically, formula 6 and table 4 from the pdf is used.
 
->>> martinitoren = [ 233883.131, 582065.167 ]
->>> coords = RD_to_WGS84(martinitoren[0], martinitoren[1])
->>> print "Martinitoren : %s, %s" % (coords[0], coords[1])
->>> Martinitoren : 53.219383167, 6.56820052908
+    > python rd2wgs84.py 233883.131 582065.167 #coordinates of martinitoren
+    [53.219383166978588, 6.5682005290780019]
 
 """
 def RD_to_WGS84(x, y):
@@ -67,8 +65,6 @@ def convert(x, y):
       print "Coordinates should be numbers"
     else:
       coords = RD_to_WGS84(x, y)
-      print coords
-
       return coords
 
 
